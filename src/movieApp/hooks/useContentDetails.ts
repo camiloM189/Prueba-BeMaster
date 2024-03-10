@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Result } from "../../types/movies";
 import { getMovieForId } from "../helpers/getMovieForId";
-import { getdistribution } from "../helpers/getdistribution";
+
 import { ICast } from "../../types/cast";
+import { getDistribution } from "../helpers/getDistribution";
+
+
 
 export const useContentDetails = (id:string) => {
 
@@ -35,7 +38,7 @@ export const useContentDetails = (id:string) => {
     const obtenerDistribution = async() => {
         try {
             if (!!id) {
-               const distribution = await getdistribution(id)
+               const distribution = await getDistribution(id);
                 setCast(distribution)
    
                 
