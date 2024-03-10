@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { Result } from "../../types/Movies";
+
 import { useGetMovies } from "./useGetMovies";
+
+import { Result } from '../../types/movies';
 
 export const useContentCategory = (genre:string | undefined) => {
 

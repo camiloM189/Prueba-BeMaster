@@ -1,10 +1,8 @@
-import { Result } from "../../types/Movies";
+import { Result } from '../../types/movies';
 
 interface Props{
     genre:number
 }
-
-
 
 export const getMoviesGenre = async({genre}:Props) => {
 

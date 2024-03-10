@@ -87,52 +87,5 @@ export const ContentDetails = () => {
         </div>
         
     </>
-
-
-
-
-
-
-      // <div>
-      //    {
-      //       movies && (
-      //          <div className="contenedor-img-fondo">
-      //             <div className="primer-contenedor">
-      //                <div className="contenedor-img">
-      //                   <img src={`https://media.themoviedb.org/t/p/w220_and_h330_face${movies.poster_path}`} alt={movies.title} />
-      //                </div>
-      //                <div className="segundo-contenedor">
-      //                   <div >
-      //                      <h1>{movies.title}</h1>
-      //                      <p><strong>original_title:</strong> {movies.original_title}</p>
-      //                      <p><strong>overview:</strong> {movies.overview}</p>
-      //                      <button onClick={toggleModal}>Mostrar Video</button>
-      //                      {trailer && showModal && (
-      //                         <div className="modal-overlay" onClick={toggleModal}>
-      //                            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      //                               <div className="contenedor-btn">
-      //                                  <button className="close-btn" onClick={toggleModal}>Cerrar</button>
-      //                               </div>
-
-      //                               <iframe
-      //                                  width="100%"
-      //                                  height="100%"
-      //                                  src={`https://www.youtube.com/embed/${trailer}`}
-      //                                  title="Reproductor de Película"
-      //                                  allowFullScreen
-
-      //                               ></iframe>
-      //                            </div>
-      //                         </div>
-      //                      )}
-
-      //                   </div>
-      //                </div>
-      //             </div>
-      //          </div>
-      //       )
-      //    }
-      // </div>
-      
    )
 }

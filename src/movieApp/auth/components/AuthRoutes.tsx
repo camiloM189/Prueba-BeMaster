@@ -1,4 +1,3 @@
-
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { LoginComponents } from './LoginComponents'
 import { RegisterComponents } from './RegisterComponents'

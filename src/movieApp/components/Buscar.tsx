@@ -1,30 +1,13 @@
-import { useEffect, useState } from "react";
-import { getMoviesName } from "../helpers/getMoviesName";
 import { useForm } from "../hooks/useForm"
-import { getMovies } from "../helpers/getMovies";
 import { useNavigate } from "react-router-dom";
+import { useSearchMovie } from '../hooks/useSearchMovie';
 
 const formData = {
     name: '',
 
   }
 
-  interface IResult {
-    adult:boolean
-    backdrop_path:string
-    genre_ids: []
-    id: number
-    original_language: string
-    original_title: string
-    overview:string
-    popularity: number
-    poster_path: string
-    release_date: string
-    title: string
-    video: boolean
-    vote_average: number
-    vote_count: number
-}
+
 
 
 
@@ -32,55 +15,14 @@ const formData = {
 export const Buscar = () => {
     
     const {formState,onInputChange} = useForm(formData);
-    const [movies, setMovies] = useState<IResult[]>();
     const navigate = useNavigate();
-
+    const {movies,searchMovies} = useSearchMovie();
     const {name} = formState;
-
-    useEffect(() => {
-       
-       
-
-        obtenerMovies()
-    }, []);
-
-
-    const obtenerMovies = async() => {
-        try {
-            const result = await getMovies() || [];
-            if (Array.isArray(result)) {
-              
-                setMovies(result);
-            } else {
-                console.error("Error: El resultado obtenido no es un arreglo válido");
-                setMovies([]);
-            }
-        
-        } catch (error) {
-            console.error("Error al obtener películas:", error);
-            setMovies([]);
-        }
-
-    }
 
     const onSubmit = async(event:React.FormEvent<HTMLFormElement> ) => {
         event.preventDefault();
-    
+        searchMovies(name)
 
-        try {
-            const result = await getMoviesName({name}) || [];
-            if (Array.isArray(result)) {
-              
-                setMovies(result);
-            } else {
-                console.error("Error: El resultado obtenido no es un arreglo válido");
-                setMovies([]);
-            }
-        
-        } catch (error) {
-            console.error("Error al obtener películas:", error);
-            setMovies([]);
-        }
 
     }
 
@@ -109,7 +51,7 @@ export const Buscar = () => {
     
             {
                 movies?.map((mov) => (
-                    <div className="col animate__animated animate__fadeIn" style={{cursor:'pointer'}} onClick={() => DetailsMovies(mov.id) }>
+                    <div className="col animate__animated animate__fadeIn" style={{cursor:'po'}} onClick={() => DetailsMovies(mov.id) }>
                     <div className="card">
                        
                         <div className="text-center">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Result } from "../../types/Movies";
+import { Result } from "../../types/movies";
 import { getMovieForId } from "../helpers/getMovieForId";
 import { getdistribution } from "../helpers/getdistribution";
 import { ICast } from "../../types/cast";

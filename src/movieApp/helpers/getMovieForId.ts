@@ -1,4 +1,4 @@
-import { IResultTrailer, Result } from "../../types/Movies";
+import { IResultTrailer, Result } from "../../types/movies";
 
 
 

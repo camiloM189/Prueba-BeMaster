@@ -1,23 +1,9 @@
 import { useEffect, useState } from "react";
 import { getMovies } from "../helpers/getMovies";
 import { useNavigate } from "react-router-dom";
+import { Result } from "../../types/movies";
 
-interface IResult {
-    adult:boolean
-    backdrop_path:string
-    genre_ids: []
-    id: number
-    original_language: string
-    original_title: string
-    overview:string
-    popularity: number
-    poster_path: string
-    release_date: string
-    title: string
-    video: boolean
-    vote_average: number
-    vote_count: number
-}
+
 
 
 
@@ -25,7 +11,7 @@ export const Popular = () => {
 
     const navigate = useNavigate();
 
-    const [movies, setMovies] = useState<IResult[]>();
+    const [movies, setMovies] = useState<Result[]>();
 
 
     
