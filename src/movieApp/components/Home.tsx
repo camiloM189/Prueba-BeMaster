@@ -100,7 +100,7 @@ export const Home = () => {
         
                                 <div className="card-body">
         
-                                    <h5 className="card-title">Comedia</h5>      
+                                    <h5 className="card-title">Drama</h5>      
                                 </div>
         
                             </div>
