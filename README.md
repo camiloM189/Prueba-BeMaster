@@ -9,6 +9,14 @@
 •⁠  ⁠API de Movie Database (para obtener información sobre películas y series)
 
 
+## El commit del dia de hoy
+
+Se debe a que ayer, a última hora, hice un pequeño cambio en mi aplicación.
+Cambié el nombre de un archivo y cuando hice el commit en GitHub, 
+este no cambió correctamente. Solo se modificó la exportación, 
+lo cual rompió el código. Pido disculpas de antemano por ese error
+
+
 
 
 
